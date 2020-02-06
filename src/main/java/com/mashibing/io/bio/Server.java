@@ -12,7 +12,7 @@ public class Server {
         ss.bind(new InetSocketAddress("127.0.0.1", 8888));
         while(true) {
             Socket s = ss.accept(); //阻塞方法
-
+            //以多线程的方式处理客户端交互
             new Thread(() -> {
                 handle(s);
             }).start();
