@@ -9,7 +9,7 @@ import java.net.Socket;
 public class Server {
     public static void main(String[] args) throws IOException {
         ServerSocket ss = new ServerSocket();
-        ss.bind(new InetSocketAddress("127.0.0.1", 8888));
+        ss.bind(new InetSocketAddress("192.168.43.100", 8888));
         while(true) {
             Socket s = ss.accept(); //阻塞方法
             //以多线程的方式处理客户端交互
